@@ -6,33 +6,33 @@ echo "   |                                    _                           |   ";
 echo "   |   |/ • ._   _| |  _     /\   _|   |_)  _  ._ _   _      _  ._  |   ";
 echo "   |   |\ | | | (_| | (/_   /--\ (_|   | \ (/_ | | | (_) \/ (/_ |   |   ";
 echo "   |                                                                |   ";
-echo "    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ ";
+echo "    ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯    ";
 echo
-echo "                     Brought to you by scugn1zz0";
+echo "                     Brought to you by scugn1zz0";                      
 echo
 echo
 echo
-echo " This simple script removes Special Offers from your Kindle ";
+echo " This simple script removes *special offers* from your Kindle ";
 echo
 sleep 1
-echo " NOTE: every time you update you need to redo this procedure"
+echo " NOTE: you need to run this script every time you update your Kindle!"
 echo
 echo
 
 sleep 2
 
-read -p "You want to continue[y/n]? " -n 1 -r
-echo    
+read -p "Are you sure you want to continue [y/n]? " -n 1 -r
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
 	sleep 2
 	
 	rm -r /Volumes/Kindle/system/.assets
 	if [ $? -eq 0 ]; then
-		echo	
+		echo
 	else
-    	echo "not working..."
-    	echo "your kindle may be not supported, or just it is not recognised"
+	echo "not working..."
+	echo "your kindle may be not supported, or it was just not recognised (disconnect it and try again)"
 	fi
 
 	echo "wait a moment...";
@@ -40,11 +40,11 @@ then
 
 	touch /Volumes/Kindle/system/.assets
 	if [ $? -eq 0 ]; then
-		ech89
-		echo "done"
+		echo
+		echo "done!"
 	else
-    	echo "not..working"
-    	echo "your kindle may be not supported, or just it is not recognised"
+	echo "not working..."
+	echo "your kindle may be not supported, or it was just not recognised (disconnect it and try again)"
 	fi
 fi
 
